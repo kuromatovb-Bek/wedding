@@ -1,41 +1,26 @@
-<meta name='viewport' content='width=device-width, initial-scale=1'/><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Тўй таклифномаси</title>
     <style>
-        body {
-            background: #fffafa;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            font-family: 'Times New Roman', serif;
-            text-align: center;
-        }
-        .container {
-            width: 85%;
-            max-width: 350px;
-            background: white;
-            padding: 40px 20px;
-            border-radius: 15px;
-            border: 6px double #d4af37;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
-        .ornament { font-size: 40px; color: #d4af37; margin-bottom: 15px; }
-        h1 { font-size: 28px; color: #333; letter-spacing: 3px; margin: 10px 0; }
-        .family-name { font-size: 24px; color: #d4af37; font-weight: bold; margin: 20px 0; }
-        p { font-size: 18px; color: #555; line-height: 1.6; margin: 10px 0; }
-        .date-box { 
-            border-top: 1px solid #d4af37; 
-            border-bottom: 1px solid #d4af37; 
-            padding: 10px 0; 
-            margin: 25px 0; 
-            font-weight: bold; 
-            color: #333;
-        }
+        body { background: #fffafa; margin: 0; display: flex; justify-content: center; align-items: center; min-height: 100vh; font-family: 'Times New Roman', serif; text-align: center; }
+        .container { width: 85%; max-width: 350px; background: white; padding: 30px 20px; border-radius: 15px; border: 6px double #d4af37; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+        .ornament { font-size: 30px; color: #d4af37; margin: 10px 0; }
+        h1 { font-size: 26px; color: #333; letter-spacing: 2px; margin: 10px 0; }
+        .family-name { font-size: 22px; color: #d4af37; font-weight: bold; margin: 15px 0; }
+        p { font-size: 16px; color: #555; line-height: 1.5; margin: 8px 0; }
+        
+        /* Тайер стили */
+        #timer { display: flex; justify-content: space-around; margin: 20px 0; background: #fdf8e6; padding: 10px; border-radius: 10px; }
+        .time-node { font-size: 14px; color: #333; }
+        .time-node span { display: block; font-size: 20px; font-weight: bold; color: #d4af37; }
+
+        /* Локация ва Тўёна тугмалари эмас, чиройли блоклар */
+        .info-block { margin-top: 20px; padding: 10px; border-top: 1px dashed #d4af37; }
+        .location-link { color: #007bff; text-decoration: none; font-weight: bold; display: block; margin-top: 5px; }
+        .gift-info { font-style: italic; color: #777; font-size: 14px; margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -45,15 +30,52 @@
         <p>Ассалому алайкум!</p>
         <p>Сизни азиз инсонимизнинг никоҳ тўйи муносабати билан ёзиладиган дастурхонимизга таклиф этамиз.</p>
         
-        <div class="family-name">Quromatovlar оиласи</div>
-        
-        <div class="date-box">
-            2026 ЙИЛ<br>
-            СИЗ КУТГАН ЎША КУН
+        <div class="family-name">Sharipovlar оиласи</div>
+
+        <p>Тўйгача қолган вақт:</p>
+        <div id="timer">
+            <div class="time-node"><span id="days">00</span>Кун</div>
+            <div class="time-node"><span id="hours">00</span>Соат</div>
+            <div class="time-node"><span id="minutes">00</span>Дақ.</div>
+            <div class="time-node"><span id="seconds">00</span>Сония</div>
         </div>
 
-        <p>Ташрифингиздан мамнун бўламиз!</p>
+        <div class="info-block">
+            <p><strong>Манзил:</strong> Хўжанд шаҳри, "Сайхун" тўйхонаси</p>
+            <a href="https://maps.google.com" class="location-link">📍 Харитада кўриш</a>
+        </div>
+
+        <div class="info-block">
+            <p><strong>Тўёна учун:</strong></p>
+            <p class="gift-info">Сизнинг ташрифингиз биз учун энг катта совға! (Агар истасангиз: 5050 1234 5678 9012)</p>
+        </div>
+
         <div class="ornament">✨</div>
     </div>
+
+    <script>
+        // Тўй санасини шу ерга ёзинг (Йил, Ой-1, Кун)
+        const weddingDate = new Date(2026, 4, 20).getTime(); // 2026 йил, Май (4), 20-кун
+
+        const timerFunc = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+
+            const d = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const h = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = d;
+            document.getElementById("hours").innerHTML = h;
+            document.getElementById("minutes").innerHTML = m;
+            document.getElementById("seconds").innerHTML = s;
+
+            if (distance < 0) {
+                clearInterval(timerFunc);
+                document.getElementById("timer").innerHTML = "Тўй бошланди!";
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
