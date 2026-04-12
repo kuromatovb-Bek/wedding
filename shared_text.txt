@@ -127,7 +127,7 @@
                 <p class="description">Бисмиллаҳир Роҳманир Роҳийм...</p>
                 <p class="description">Аллоҳнинг изни ила бошланган ушбу муҳаббат ва садоқат йўлида, фарзандларимизнинг никоҳ тўйи муносабати билан ёзиладиган тўкин дастурхонимиз меҳмони бўлинг.</p>
                 
-                <div class="calligraphy">Sharipovlar оиласи</div>
+                <div class="calligraphy">Quromatovlar оиласи</div>
             </div>
 
             <div class="main-divider"></div>
