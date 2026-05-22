@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Тўй Таклифномаси · Азиз & Малика</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&family=Cinzel:wght@400;600&display=swap" rel="stylesheet"/>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Cormorant Garamond',serif;
+background:#fff8f5;
+color:#442b35;
+overflow-x:hidden;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:30px;
+background:
+linear-gradient(rgba(255,248,245,.85),rgba(255,248,245,.9)),
+url('https://images.unsplash.com/photo-1511285560929-80b456fea0bc?q=80&w=1400&auto=format&fit=crop');
+background-size:cover;
+background-position:center;
+}
+
+.hero h1{
+font-family:'Great Vibes',cursive;
+font-size:110px;
+color:#c8707a;
+}
+
+.names{
+font-family:'Cinzel',serif;
+font-size:38px;
+letter-spacing:5px;
+margin-top:10px;
+}
+
+.date{
+margin-top:25px;
+font-size:20px;
+color:#8a7080;
+line-height:1.8;
+}
+
+.btns{
+margin-top:35px;
+display:flex;
+gap:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+button{
+padding:14px 30px;
+border:none;
+cursor:pointer;
+font-size:14px;
+letter-spacing:2px;
+border-radius:5px;
+transition:.3s;
+}
+
+.btn1{
+background:#c8707a;
+color:white;
+}
+
+.btn1:hover{
+transform:translateY(-3px);
+}
+
+.btn2{
+background:white;
+border:1px solid #c8707a;
+color:#c8707a;
+}
+
+.btn2:hover{
+background:#fff0f3;
+}
+
+/* SECTION */
+
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+.sec-title{
+font-family:'Great Vibes',cursive;
+font-size:60px;
+color:#c8707a;
+margin-bottom:20px;
+}
+
+.sec-text{
+max-width:700px;
+margin:auto;
+font-size:20px;
+line-height:1.8;
+color:#7a616d;
+}
+
+/* COUNTDOWN */
+
+.countdown{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+margin-top:40px;
+}
+
+.box{
+background:white;
+padding:20px;
+min-width:90px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.box h2{
+font-size:40px;
+color:#c8707a;
+}
+
+.box p{
+margin-top:5px;
+font-size:14px;
+letter-spacing:2px;
+}
+
+/* CARDS */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+max-width:1000px;
+margin:50px auto 0;
+}
+
+.card{
+background:white;
+padding:35px 25px;
+border-radius:15px;
+box-shadow:0 5px 25px rgba(0,0,0,.06);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card .icon{
+font-size:45px;
+margin-bottom:15px;
+}
+
+.card h3{
+font-family:'Cinzel',serif;
+margin-bottom:15px;
+}
+
+/* TIMELINE */
+
+.timeline{
+max-width:700px;
+margin:50px auto 0;
+text-align:left;
+}
+
+.item{
+background:white;
+padding:20px;
+margin-bottom:20px;
+border-left:5px solid #c8707a;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.item h3{
+font-family:'Cinzel',serif;
+margin-bottom:8px;
+}
+
+.item span{
+color:#c8707a;
+font-weight:bold;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+max-width:1000px;
+margin:50px auto 0;
+}
+
+.gallery img{
+width:100%;
+height:250px;
+object-fit:cover;
+border-radius:15px;
+transition:.4s;
+}
+
+.gallery img:hover{
+transform:scale(1.03);
+}
+
+/* LOCATION */
+
+.location-box{
+max-width:600px;
+margin:40px auto 0;
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 5px 25px rgba(0,0,0,.08);
+}
+
+/* RSVP */
+
+.form{
+max-width:600px;
+margin:50px auto 0;
+background:white;
+padding:40px;
+border-radius:15px;
+box-shadow:0 5px 25px rgba(0,0,0,.08);
+}
+
+input,select{
+width:100%;
+padding:15px;
+margin-bottom:15px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:16px;
+}
+
+.send{
+width:100%;
+background:#c8707a;
+color:white;
+font-size:15px;
+}
+
+/* FOOTER */
+
+footer{
+padding:40px 20px;
+text-align:center;
+background:#fff0f3;
+margin-top:50px;
+}
+
+footer h2{
+font-family:'Great Vibes',cursive;
+font-size:55px;
+color:#c8707a;
+}
+
+/* MUSIC BUTTON */
+
+.music-btn{
+position:fixed;
+right:20px;
+bottom:20px;
+z-index:999;
+background:#c8707a;
+color:white;
+border-radius:50%;
+width:60px;
+height:60px;
+font-size:22px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:70px;
+}
+
+.names{
+font-size:24px;
+}
+
+.sec-title{
+font-size:45px;
+}
+
+.date{
+font-size:17px;
+}
+
+}
+
+</style>
+</head>
+<body>
+
+<!-- MUSIC -->
+<audio id="music" loop>
+<source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" onclick="toggleMusic()">🎵</button>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<h1>Тўй</h1>
+
+<div class="names">
+АЗИЗ ♥ МАЛИКА
+</div>
+
+<div class="date">
+2026 йил · 15 Август · Шанба<br>
+Соат 18:00<br>
+«Наврӯз» Тўйхонаси · Душанбе
+</div>
+
+<div class="btns">
+<button class="btn1" onclick="scrollToSection('rsvp')">
+💌 Иштирок Этаман
+</button>
+
+<button class="btn2" onclick="scrollToSection('about')">
+📖 Батафсил
+</button>
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section class="section" id="about">
+
+<h2 class="sec-title">Сизни Кутамиз</h2>
+
+<p class="sec-text">
+Иккита қалб бир умр бирга яшашга қарор қилди.
+Ушбу қувончли кунда сиз азиз меҳмонимиз бўлишингизни истаймиз.
+Сизнинг иштирокингиз биз учун катта бахт.
+</p>
+
+</section>
+
+<!-- COUNTDOWN -->
+
+<section class="section">
+
+<h2 class="sec-title">Санаётирмиз...</h2>
+
+<div class="countdown">
+
+<div class="box">
+<h2 id="d">00</h2>
+<p>КУН</p>
+</div>
+
+<div class="box">
+<h2 id="h">00</h2>
+<p>СОАТ</p>
+</div>
+
+<div class="box">
+<h2 id="m">00</h2>
+<p>ДАҚИҚА</p>
+</div>
+
+<div class="box">
+<h2 id="s">00</h2>
+<p>СОНИЯ</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- CARDS -->
+
+<section class="section">
+
+<h2 class="sec-title">Тўй Ҳақида</h2>
+
+<div class="cards">
+
+<div class="card">
+<div class="icon">📅</div>
+<h3>Сана</h3>
+<p>2026 йил 15 Август</p>
+</div>
+
+<div class="card">
+<div class="icon">🕕</div>
+<h3>Вақт</h3>
+<p>18:00 да бошланади</p>
+</div>
+
+<div class="card">
+<div class="icon">🌹</div>
+<h3>Dress Code</h3>
+<p>Elegant Style</p>
+</div>
+
+<div class="card">
+<div class="icon">🎶</div>
+<h3>Мусиқа</h3>
+<p>Жонли мусиқа ва шоу</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- PROGRAM -->
+
+<section class="section">
+
+<h2 class="sec-title">Тўй Дастури</h2>
+
+<div class="timeline">
+
+<div class="item">
+<span>17:30</span>
+<h3>Меҳмонлар Қабули</h3>
+<p>Фотозона ва кутиб олиш.</p>
+</div>
+
+<div class="item">
+<span>18:00</span>
+<h3>Никоҳ Маросими</h3>
+<p>Тантанали никоҳ.</p>
+</div>
+
+<div class="item">
+<span>19:00</span>
+<h3>Зиёфат</h3>
+<p>Миллий таомлар ва дастурхон.</p>
+</div>
+
+<div class="item">
+<span>20:00</span>
+<h3>Рақс ва Мусиқа</h3>
+<p>Жонли шоу дастури.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="section">
+
+<h2 class="sec-title">Фото Галерея</h2>
+
+<div class="gallery">
+
+<img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1200&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1200&auto=format&fit=crop">
+
+<img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf?q=80&w=1200&auto=format&fit=crop">
+
+</div>
+
+</section>
+
+<!-- LOCATION -->
+
+<section class="section">
+
+<h2 class="sec-title">Манзил</h2>
+
+<div class="location-box">
+
+<h3 style="font-size:30px;margin-bottom:15px;">
+🏛️ «Наврӯз» Тўйхонаси
+</h3>
+
+<p style="line-height:2;color:#7a616d;">
+Душанбе шаҳри<br>
+Рудакий кўчаси 15-уй<br><br>
+
+🚗 Паркинг мавжуд<br>
+🚕 Марказдан 5 дақиқа
+</p>
+
+<br>
+
+<button class="btn1"
+onclick="window.open('https://maps.google.com/?q=Dushanbe','_blank')">
+📍 Харитада Кўриш
+</button>
+
+</div>
+
+</section>
+
+<!-- RSVP -->
+
+<section class="section" id="rsvp">
+
+<h2 class="sec-title">Иштирок Этинг</h2>
+
+<div class="form">
+
+<input type="text" id="name" placeholder="Исм Фамилия">
+
+<input type="tel" id="phone" placeholder="+992 xx xxx xx xx">
+
+<select id="count">
+<option>1 киши</option>
+<option>2 киши</option>
+<option>3 киши</option>
+<option>4 киши+</option>
+</select>
+
+<select id="attend">
+<option>✅ Иштирок Этаман</option>
+<option>😔 Кела Олмайман</option>
+</select>
+
+<input type="text" id="msg" placeholder="Тилакларингиз">
+
+<button class="send" onclick="sendTelegram()">
+💌 Юбориш
+</button>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2>Азиз & Малика</h2>
+
+<p style="margin-top:10px;color:#8a7080;">
+15 Август 2026 ♥ Душанбе
+</p>
+
+</footer>
+
+<script>
+
+/* SCROLL */
+
+function scrollToSection(id){
+document.getElementById(id).scrollIntoView({
+behavior:'smooth'
+});
+}
+
+/* MUSIC */
+
+const music=document.getElementById('music');
+
+function toggleMusic(){
+
+if(music.paused){
+music.play();
+}else{
+music.pause();
+}
+
+}
+
+/* COUNTDOWN */
+
+const target=new Date("2026-08-15T18:00:00").getTime();
+
+setInterval(()=>{
+
+const now=new Date().getTime();
+
+const diff=target-now;
+
+const d=Math.floor(diff/(1000*60*60*24));
+const h=Math.floor((diff%(1000*60*60*24))/(1000*60*60));
+const m=Math.floor((diff%(1000*60*60))/(1000*60));
+const s=Math.floor((diff%(1000*60))/1000);
+
+document.getElementById('d').innerHTML=d;
+document.getElementById('h').innerHTML=h;
+document.getElementById('m').innerHTML=m;
+document.getElementById('s').innerHTML=s;
+
+},1000);
+
+/* TELEGRAM RSVP */
+
+function sendTelegram(){
+
+const name=document.getElementById('name').value;
+const phone=document.getElementById('phone').value;
+const count=document.getElementById('count').value;
+const attend=document.getElementById('attend').value;
+const msg=document.getElementById('msg').value;
+
+if(name=="" || phone==""){
+alert("Маълумотларни тўлдиринг");
+return;
+}
+
+/* TOKEN VA CHAT ID */
+const token="TOKENINGIZ";
+const chat_id="CHAT_ID";
+
+const text=
+`💌 Янги RSVP
+
+👤 Исм: ${name}
+
+📞 Телефон: ${phone}
+
+👥 Киши: ${count}
+
+📌 Ҳолати: ${attend}
+
+💬 Тилак:
+${msg}`;
+
+fetch(`https://api.telegram.org/bot${token}/sendMessage`,{
+
+method:'POST',
+
+headers:{
+'Content-Type':'application/json'
+},
+
+body:JSON.stringify({
+chat_id:chat_id,
+text:text
+})
+
+})
+
+.then(()=>{
+alert("✅ Юборилди!");
+});
+
+}
+
+</script>
+
+</body>
+            </html>
